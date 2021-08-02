@@ -1,1 +1,1 @@
-# Django wit GraphQL *Graphene*
+# Django with GraphQL *Graphene*
