@@ -3,6 +3,7 @@ pragma solidity ^0.8.3;
 
 import "hardhat/console.sol";
 
+//ethereum environment with Hardhat
 contract Token {
   string public name = "EQX test";
   string public symbol = "EQXT";
