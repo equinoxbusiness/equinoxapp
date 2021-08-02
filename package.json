@@ -1,7 +1,7 @@
 {
-  "name": "hardhat-hackathon-boilerplate",
+  "name": "equinox-business",
   "version": "1.0.0",
-  "description": "A boilerplate repository to get you started with Hardhat and Ethereum development",
+  "description": "Application's base code",
   "directories": {
     "test": "test"
   },
