@@ -1,24 +1,24 @@
-import React from "react";
+import React from 'react';
 
 // We'll use ethers to interact with the Ethereum network and our contract
-import { BigNumber, ethers } from "ethers";
-import "web3modal"; // needed to get window.ethereum
+import { BigNumber, ethers } from 'ethers';
+import 'web3modal'; // needed to get window.ethereum
 
 // We import the contract's artifacts and address here, as we are going to be
 // using them with ethers
-import TokenArtifact from "../contracts/Token.json";
-import contractAddress from "../contracts/contract-address.json";
+import TokenArtifact from '../contracts/Token.json';
+import contractAddress from '../contracts/contract-address.json';
 
 // All the logic of this dapp is contained in the Dapp component.
 // These other components are just presentational ones: they don't have any
 // logic. They just render HTML.
-import { NoWalletDetected } from "./NoWalletDetected";
-import { ConnectWallet } from "./ConnectWallet";
-import { Loading } from "./Loading";
-import { Transfer } from "./Transfer";
-import { TransactionErrorMessage } from "./TransactionErrorMessage";
-import { WaitingForTransactionMessage } from "./WaitingForTransactionMessage";
-import { NoTokensMessage } from "./NoTokensMessage";
+import { NoWalletDetected } from './NoWalletDetected';
+import { ConnectWallet } from './ConnectWallet';
+import { Loading } from './Loading';
+import { Transfer } from './Transfer';
+import { TransactionErrorMessage } from './TransactionErrorMessage';
+import { WaitingForTransactionMessage } from './WaitingForTransactionMessage';
+import { NoTokensMessage } from './NoTokensMessage';
 
 // This is the Hardhat Network id, you might change it in the hardhat.config.js
 // Here's a list of network ids https://docs.metamask.io/guide/ethereum-provider.html#properties
@@ -30,27 +30,27 @@ const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 type MainProps = {
   // none yet
-}
+};
 
 type MainState = {
   // We store multiple things in Dapp's state.
   // You don't need to follow this pattern, but it's an useful example.
-    // The info of the token (i.e. It's Name and symbol)
-    tokenData?: {
-      name: string,
-      symbol: string
-    },
-    // The user's address and balance
-    selectedAddress?: string,
-    balance?: BigNumber,
-    // The ID about transactions being sent, and any possible error with them
-    txBeingSent?: string,
-    transactionError?: Error,
-    networkError?: string,
-    provider?: ethers.providers.Web3Provider,
-    token?: ethers.Contract,
-    pollDataInterval?: NodeJS.Timeout,
-}
+  // The info of the token (i.e. It's Name and symbol)
+  tokenData?: {
+    name: string;
+    symbol: string;
+  };
+  // The user's address and balance
+  selectedAddress?: string;
+  balance?: BigNumber;
+  // The ID about transactions being sent, and any possible error with them
+  txBeingSent?: string;
+  transactionError?: Error;
+  networkError?: string;
+  provider?: ethers.providers.Web3Provider;
+  token?: ethers.Contract;
+  pollDataInterval?: NodeJS.Timeout;
+};
 
 const initialState: MainState = {
   tokenData: undefined,
@@ -62,7 +62,7 @@ const initialState: MainState = {
   provider: undefined,
   token: undefined,
   pollDataInterval: undefined,
-}
+};
 
 // This component is in charge of doing these things:
 //   1. It connects to the user's wallet
@@ -96,8 +96,8 @@ export class Dapp extends React.Component<MainProps, MainState> {
     // clicks a button. This callback just calls the _connectWallet method.
     if (!this.state.selectedAddress) {
       return (
-        <ConnectWallet 
-          connectWallet={() => this._connectWallet()} 
+        <ConnectWallet
+          connectWallet={() => this._connectWallet()}
           networkError={this.state.networkError}
           dismiss={() => this._dismissNetworkError()}
         />
@@ -119,7 +119,7 @@ export class Dapp extends React.Component<MainProps, MainState> {
               {this.state.tokenData.name} ({this.state.tokenData.symbol})
             </h1>
             <p>
-              Welcome <b>{this.state.selectedAddress}</b>, you have{" "}
+              Welcome <b>{this.state.selectedAddress}</b>, you have{' '}
               <b>
                 {this.state.balance.toString()} {this.state.tokenData.symbol}
               </b>
@@ -207,21 +207,21 @@ export class Dapp extends React.Component<MainProps, MainState> {
     this._initialize(selectedAddress);
 
     // We reinitialize it whenever the user changes their account.
-    window.ethereum.on("accountsChanged", ([newAddress]: [string]) => {
+    window.ethereum.on('accountsChanged', ([newAddress]: [string]) => {
       this._stopPollingData();
       // `accountsChanged` event can be triggered with an undefined newAddress.
       // This happens when the user removes the Dapp from the "Connected
       // list of sites allowed access to your addresses" (Metamask > Settings > Connections)
-      // To avoid errors, we reset the dapp state 
+      // To avoid errors, we reset the dapp state
       if (newAddress === undefined) {
         return this._resetState();
       }
-      
+
       this._initialize(newAddress);
     });
-    
+
     // We reset the dapp state if the network is changed
-    window.ethereum.on("networkChanged", ([networkId]: [string]) => {
+    window.ethereum.on('networkChanged', ([networkId]: [string]) => {
       this._stopPollingData();
       this._resetState();
     });
@@ -258,8 +258,8 @@ export class Dapp extends React.Component<MainProps, MainState> {
       token: new ethers.Contract(
         contractAddress.Token,
         TokenArtifact.abi,
-        _provider.getSigner(0)
-      )
+        _provider.getSigner(0),
+      ),
     });
   }
 
@@ -272,7 +272,7 @@ export class Dapp extends React.Component<MainProps, MainState> {
   // initialize the app, as we do with the token data.
   _startPollingData() {
     this.setState({
-      pollDataInterval: setInterval(() => this._updateBalance(), 1000)
+      pollDataInterval: setInterval(() => this._updateBalance(), 1000),
     });
 
     // We run it once immediately so we don't have to wait for it
@@ -282,7 +282,7 @@ export class Dapp extends React.Component<MainProps, MainState> {
   _stopPollingData() {
     clearInterval(this.state.pollDataInterval!);
     this.setState({
-      pollDataInterval: undefined
+      pollDataInterval: undefined,
     });
   }
 
@@ -296,7 +296,9 @@ export class Dapp extends React.Component<MainProps, MainState> {
   }
 
   async _updateBalance() {
-    const balance = await this.state.token!.balanceOf(this.state.selectedAddress);
+    const balance = await this.state.token!.balanceOf(
+      this.state.selectedAddress,
+    );
     this.setState({ balance });
   }
 
@@ -336,7 +338,7 @@ export class Dapp extends React.Component<MainProps, MainState> {
       if (receipt.status === 0) {
         // We can't know the exact error that make the transaction fail once it
         // was mined, so we throw this generic one.
-        throw new Error("Transaction failed");
+        throw new Error('Transaction failed');
       }
 
       // If we got here, the transaction was successful, so you may want to
@@ -385,14 +387,14 @@ export class Dapp extends React.Component<MainProps, MainState> {
     this.setState(initialState);
   }
 
-  // This method checks if Metamask selected network is Localhost:8545 
+  // This method checks if Metamask selected network is Localhost:8545
   _checkNetwork() {
     if (window.ethereum.networkVersion === HARDHAT_NETWORK_ID) {
       return true;
     }
 
-    this.setState({ 
-      networkError: 'Please connect Metamask to Localhost:8545'
+    this.setState({
+      networkError: 'Please connect Metamask to Localhost:8545',
     });
 
     return false;
