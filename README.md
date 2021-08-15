@@ -1,6 +1,16 @@
-# Equinox Application
+## Equinox Application
 
 - Under Development
+- 
+
+## App Includes:
+
+##### [Hardhat](https://hardhat.org/) : An Ethereum development task runner and testing network.
+##### [Mocha](https://mochajs.org/) : A JavaScript test runner.
+##### [Chai](https://www.chaijs.com/) : A JavaScript assertion library.
+##### [ethers.js](https://docs.ethers.io/ethers.js/html/) : A JavaScript library for interacting with Ethereum.
+##### [Waffle](https://github.com/EthWorks/Waffle/): To have Ethereum-specific Chai assertions/mathers.
+##### [A frontend Dapp](https://github.com/willhennessy/hardhat-react-typechain-template/blob/master/frontend) : A Dapp which uses Create React App
 
 App is using Hardhat and React.
 
