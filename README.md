@@ -41,5 +41,12 @@ npm start
 ```
 Open http://localhost:3000/ to see Dapp. You will need to have Metamask installed and listening to localhost 8545
 
-Documentation:
-[Hardhat documemntation](https://hardhat.org/getting-started/)
+User Guide
+You can find detailed instructions on using this repository and many tips in its documentation.
+
+Project description (Token.sol): (https://hardhat.org/tutorial/4-contracts/)
+Setting up the environment
+Testing with Hardhat, Mocha and Waffle
+Setting up Metamask
+Hardhat's full documentation
+For a complete introduction to Hardhat, refer to this guide.
