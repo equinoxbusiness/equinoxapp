@@ -1,0 +1,25 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+.idea
+
+# Hardhat files
+cache
+artifacts
+
+# yarn
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+#TypeChain auto-gen files
+typechain
+
+# misc
+.DS_Store
+.env*
