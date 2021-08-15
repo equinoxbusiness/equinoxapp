@@ -55,8 +55,8 @@ Open http://localhost:3000/ to see Dapp. You will need to have Metamask installe
 User Guide
 You can find detailed instructions on using this repository and many tips in its documentation.
 
-### Setting up the environment (https://hardhat.org/tutorial/1-setup/)<br>
-### Testing with Hardhat, Mocha and Waffle (https://hardhat.org/tutorial/5-test/)<br>
-### Setting up Metamask (https://hardhat.org/tutorial/8-frontend/#setting-up-metamask)<br>
-### Hardhat's full documentation (https://hardhat.org/getting-started/)<br>
-### For a complete introduction to Hardhat, refer to this guide.
+#### Setting up the environment (https://hardhat.org/tutorial/1-setup/)<br>
+#### Testing with Hardhat, Mocha and Waffle (https://hardhat.org/tutorial/5-test/)<br>
+#### Setting up Metamask (https://hardhat.org/tutorial/8-frontend/#setting-up-metamask)<br>
+#### Hardhat's full documentation (https://hardhat.org/getting-started/)<br>
+#### For a complete introduction to Hardhat, refer to [this](https://hardhat.org/getting-started/) guide.
