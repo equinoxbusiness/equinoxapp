@@ -44,7 +44,7 @@ Open http://localhost:3000/ to see Dapp. You will need to have Metamask installe
 User Guide
 You can find detailed instructions on using this repository and many tips in its documentation.
 
-#### H4 Project description (Token.sol): (https://hardhat.org/tutorial/4-contracts/)<br>
+#### Project description (Token.sol): (https://hardhat.org/tutorial/4-contracts/)<br>
 Setting up the environment
 Testing with Hardhat, Mocha and Waffle
 Setting up Metamask
