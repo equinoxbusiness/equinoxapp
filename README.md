@@ -40,3 +40,6 @@ npm start
 
 ```
 Open http://localhost:3000/ to see Dapp. You will need to have Metamask installed and listening to localhost 8545
+
+Documentation:
+[Hardhat documemntation](https://hardhat.org/getting-started/)
