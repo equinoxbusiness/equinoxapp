@@ -10,7 +10,8 @@
 ##### [ethers.js](https://docs.ethers.io/ethers.js/html/) : A JavaScript library for interacting with Ethereum.
 ##### [Waffle](https://github.com/EthWorks/Waffle/): To have Ethereum-specific Chai assertions/mathers.
 ##### [A frontend Dapp](https://github.com/willhennessy/hardhat-react-typechain-template/blob/master/frontend) : A Dapp which uses Create React App
-##### converts the scripts from Javascript to Typescript and adds TypeChain support
+##### [Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app) : For frontend App
+##### Converts the scripts from Javascript to Typescript and adds TypeChain support
 
 App is using Hardhat and React.
 
