@@ -21,6 +21,9 @@ npm install
 //run Hardhat's testing network
 npx hardhat node
 
+// compile contracts
+npx hardhat compile
+
 // on a new terminal, go to the repository's root folder and run this to deploy your contract
 npx hardhat run scripts/deploy.ts --network localhost
 
