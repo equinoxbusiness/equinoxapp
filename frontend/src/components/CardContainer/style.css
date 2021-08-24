@@ -1,0 +1,132 @@
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+@media  (min-width :  480px){
+    .card-big-screen{
+        display: none;
+    }
+
+    .card-mobile-screen{
+        display : block;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-big-screen{
+        display: flex;
+    }
+
+    .card-mobile-screen{
+        display : none;
+    }
+}
+
+@media  (min-width : 1200px){
+    .card-big-screen{
+        display: flex;
+    }
+
+    .card-mobile-screen{
+        display : none;
+    }
+}
+
+.container {
+    width: 300px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: #fff;
+  }
+
+.brak-word{
+    word-wrap: break-word !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card1{
+    background-color: #70708f;
+    font-size : 18px;
+}
+
+.card2{
+    background-color: #A983B8;
+    font-size : 18px;
+}
+
+.card3{
+    background-color: #91B49D;
+    font-size : 18px;
+}
+
+.card4{
+    background-color: #799BB2;
+    font-size : 18px;
+}
+
+.card5{
+    background-color: #79AFB1;
+    font-size : 18px;
+}
+
+.card-title{
+    line-height: 38px;
+    margin-bottom: 15px;
+}
+
+.card-btn1{
+    background-image: linear-gradient(to right, #fe6664 , #febd46);
+    width : 256px !important;
+}
+
+.card-btn1:hover{
+    background-image: linear-gradient(to right, #E45B5A , #E4AA3F);
+    width : 256px !important;
+}
+
+.card-btn2{
+    background-image: linear-gradient(to right, #d763ff , #fb48e2);
+    width : 256px !important;
+}
+
+.card-btn2:hover{
+    background-image: linear-gradient(to right, #c159e5 , #E140CB);
+    width : 256px !important;
+}
+
+
+.card-btn3{
+    background-image: linear-gradient(to right, #fe6664 , #febd46);
+    width : 256px !important;
+}
+
+.card-btn3:hover{
+    background-image: linear-gradient(to right, #E45B5A , #E4AA3F);
+    width : 256px !important;
+}
+
+.font-18{
+    font-size: 18px !important;
+}
+
+.font-36{
+    font-size: 36px !important;
+}
+
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }

@@ -12,6 +12,9 @@ module.exports = {
         rose: colors.rose,
       },
     },
+    fontFamily: {
+      'source-sans-pro': ['Source Sans Pro', 'sans-serif']
+    },
   },
   variants: {
     extend: {},

@@ -1,0 +1,106 @@
+
+@media  (min-width : 480px){
+    .main-container-home{
+        margin-left :10px;
+        margin-right : 10px;
+        margin-top : 5px;
+        margin-bottom : 5px;
+    }
+}
+
+
+/* @media (min-width: 600px) {
+    .main-container-home{
+        margin-left :40px;
+        margin-right : 40px;
+        margin-top : 35px;
+        margin-bottom : 35px;
+    }
+
+    .font-20{
+        font-size: 16px !important;
+        color : #000000;
+    }
+    
+} */
+
+
+@media (min-width: 768px) {
+    .main-container-home{
+        margin-left :80px;
+        margin-right : 80px;
+        margin-top : 40px;
+        margin-bottom : 40px;
+    }
+
+    .font-20{
+        font-size: 16px !important;
+        color : #000000;
+    }
+    
+}
+
+@media  (min-width : 1200px){
+    .main-container-home{
+        margin-left :120px;
+        margin-right : 120px;
+        margin-top : 60px;
+        margin-bottom : 60px;
+    }
+
+    .font-20{
+        font-size: 20px !important;
+        color : #000000;
+    }
+    
+
+}
+
+
+
+
+.toggle-btn{
+    background-color: #ECECEC;
+    padding : 3px;
+    border-radius: 3px;
+}
+
+.chain{
+    background-color: white;
+    padding: 15px 28px;
+    margin : 2px;
+    border-radius: 3px;
+    color : #747474;
+    font-size: 11px;
+}
+
+.chain-disabled{
+    background-color: #ECECEC;
+    padding: 15px 28px;
+    margin : 2px;
+    border-radius: 3px;
+    color : #747474;
+    font-size: 11px;
+}
+
+
+
+
+.logo.img{
+    height : 72px !important;
+    width : 72px !important;
+}
+
+.font-11{
+    font-size: 11px !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }

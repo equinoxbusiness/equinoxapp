@@ -1,0 +1,11 @@
+.toggleBtn{
+    background-color: lightgrey;
+    display: inline-block;
+    height : 35px;
+    margin : 70px;
+    width : 200px
+}
+
+.chk{
+    display : none;
+}
