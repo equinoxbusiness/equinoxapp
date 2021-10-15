@@ -1,62 +1,70 @@
-## Equinox Application
-(Under Development)
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## App Includes:
+## Available Scripts
 
-##### [Hardhat](https://hardhat.org/) : An Ethereum development task runner and testing network.
-##### [Mocha](https://mochajs.org/) : A JavaScript test runner.
-##### [Chai](https://www.chaijs.com/) : A JavaScript assertion library.
-##### [ethers.js](https://docs.ethers.io/ethers.js/html/) : A JavaScript library for interacting with Ethereum.
-##### [Waffle](https://github.com/EthWorks/Waffle/): To have Ethereum-specific Chai assertions/mathers.
-##### [A frontend Dapp](https://github.com/willhennessy/hardhat-react-typechain-template/blob/master/frontend) : A Dapp which uses Create React App
-##### [Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app) : For frontend App
-##### Converts the scripts from Javascript to Typescript and adds TypeChain support
+In the project directory, you can run:
 
-App is using Hardhat and React.
+### `npm start`
 
-Hardhat: An Ethereum development task runner and testing network.
-Mocha: A JavaScript test runner.
-Chai: A JavaScript assertion library.
-ethers.js: A JavaScript library for interacting with Ethereum.
-Waffle: To have Ethereum-specific Chai assertions/mathers.
-A frontend/Dapp for a sample: A Dapp which uses Create React App.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-# Quick start (Ethereum environment)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```
-// access ethereum environment with hardhat
-cd equinox app
-npm install
+### `npm test`
 
-//run Hardhat's testing network
-npx hardhat node
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-// compile contracts
-npx hardhat compile
+### `npm run build`
 
-// on a new terminal, go to the repository's root folder and run this to deploy your contract
-npx hardhat run scripts/deploy.ts --network localhost
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-# Quick start (Frontend)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```
-cd frontend
-npm install
-npm start
+### `npm run eject`
 
-//Open http://localhost:3000/ to check App
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```
-Open http://localhost:3000/ to see Dapp. You will need to have Metamask installed and listening to localhost 8545
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-User Guide
-You can find detailed instructions on using this repository and many tips in its documentation.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-#### Setting up the environment (https://hardhat.org/tutorial/1-setup/)<br>
-#### Testing with Hardhat, Mocha and Waffle (https://hardhat.org/tutorial/5-test/)<br>
-#### Setting up Metamask (https://hardhat.org/tutorial/8-frontend/#setting-up-metamask)<br>
-#### Hardhat's full documentation (https://hardhat.org/getting-started/)<br>
-#### For a complete introduction to Hardhat, refer to [this](https://hardhat.org/getting-started/) guide.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
