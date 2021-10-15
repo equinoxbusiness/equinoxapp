@@ -8,9 +8,9 @@ import contracts from './../Config/contracts'
 export const getCrowdsaleContract = async () => {
     try {
         let web3 = await getWeb3();
-        console.log("here", web3);
+        // console.log("here", web3);
         let crowdsale = await new web3.eth.Contract(crowdsaleAbi, await getAddress(contracts.crowdsale));
-        console.log("crowdsale", crowdsale)
+        // console.log("crowdsale", crowdsale)
         return crowdsale;
     }
     catch (e) {

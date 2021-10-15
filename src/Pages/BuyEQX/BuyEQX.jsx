@@ -522,33 +522,7 @@ const BuyEQX = (props) => {
         {dialogueBox1 ? (
           <div className="dialogue-box-1">
             <div className="card">
-              {/* <div className="card-header">
-                <h4>Select A Token</h4>
-                <GrClose
-                  className="close"
-                  onClick={() => setDialogueBox1(false)}
-                />
-              </div>
-              <div className="card-header">
-                <input
-                  type="text"
-                  placeholder="seacrh name or paste address"
-                  className="search-name"
-                />
-              </div>
-              <div className="card-header d-block">
-                <h5>Commom Bases ?</h5>
-
-                <div className="card-content">
-                  <button onClick={() => handleDropdown("BTC")}>
-                    <img src={Image} alt="" /> <span>BTC</span>
-                  </button>
-                  <button onClick={() => handleDropdown("ETH")}>
-                    <img src={Image} alt="" /> <span>ETH</span>
-                  </button>
-                </div>
-              </div>
-              <hr /> */}
+              
               <div className="card-scroll">
                 {data.map((item, index) => {
                   return (
