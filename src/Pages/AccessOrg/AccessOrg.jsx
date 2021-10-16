@@ -5,8 +5,8 @@ const AccessOrg = () => {
     <div id="access-org">
       <div className="hero-section">
         <h1>
-          What is <br />
-          <span>ACCESS ORG 3.0</span> ?
+          What <br />
+          <span>ORG 3.0 Are</span> ?
         </h1>
         <p>
           ORG 3.0 stands for 'Operations and Resources Group' based on semantic

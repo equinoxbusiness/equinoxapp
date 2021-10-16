@@ -72,9 +72,7 @@ const BuyEQX = (props) => {
       try {
         // await reset()
         await getBalance();
-      }
-
-      catch (e) {
+      } catch (e) {
         console.log(e);
       }
     })();
@@ -87,9 +85,7 @@ const BuyEQX = (props) => {
       try {
         // await reset()
         await getBalance();
-      }
-
-      catch (e) {
+      } catch (e) {
         console.log(e);
       }
     })();
@@ -109,8 +105,7 @@ const BuyEQX = (props) => {
           localStorage.setItem("ref", id);
           setRef(id);
         }
-      }
-      catch (e) {
+      } catch (e) {
         console.log(e);
       }
     })();
@@ -120,12 +115,14 @@ const BuyEQX = (props) => {
     (async () => {
       try {
         if (props.account && props.account.account) {
-          let link = await generateRefLink(`${window.location.origin.toString()}/buy-eqx/?id=`, props.account.account);
+          let link = await generateRefLink(
+            `${window.location.origin.toString()}/buy-eqx/?id=`,
+            props.account.account
+          );
           console.log("ref------>", link);
           setRefLink(link);
         }
-      }
-      catch (e) {
+      } catch (e) {
         console.log(e);
       }
     })();
@@ -162,8 +159,7 @@ const BuyEQX = (props) => {
           );
           setInputAmount(_input);
         }
-      }
-      catch (e) {
+      } catch (e) {
         console.log(e);
       }
     },
@@ -453,12 +449,14 @@ const BuyEQX = (props) => {
             <SwiperSlide>
               <div className="swiper_items custom">
                 <div className="slider-content">
+                  <h2>Crowdsale</h2>
+                  <br />
                   <h3>
                     <span>Equinox Token Info:</span>Equinox with a symbol EQX is
                     a fixed supply BEP20 standard digital token.
                   </h3>
                   <h3>
-                    <span>Contract Address:</span>
+                    <span>Contract Address: </span>
                     <a
                       href="https://bscscan.com/token/0xe1dba43428cc6ab2672061ee3385af09f1c85781"
                       target="_blank"
@@ -467,13 +465,13 @@ const BuyEQX = (props) => {
                     </a>
                   </h3>
                   <h3>
-                    <span>Total Supply:</span> 100 Million
+                    <span>Total Supply: </span> 100 Million
                   </h3>
                   <h3>
-                    <span>Launch Date:</span> 19 June 2021
+                    <span>Launch Date: </span> 19 June 2021
                   </h3>
                   <h3>
-                    <span>Use cases:</span>
+                    <span>Use cases: </span>
                     <ol className="slider-lists">
                       <li>
                         Hold certain number of EQX to register ORG 3.0 and use
@@ -487,16 +485,19 @@ const BuyEQX = (props) => {
                     </ol>
                   </h3>
                   <h3>
-                    <span>Proposed supply for Crowdsale:</span> 15 Million Only
+                    <span>Proposed supply for Crowdsale: </span> 15 Million Only
                   </h3>
                   <h3>
-                    <span>Crypto assets allowed for contribution:</span> BTC,
+                    <span>Crypto assets allowed for contribution: </span> BTC,
                     ETH, BNB, BUSD, USDT
                   </h3>
                   <h3 className="icon-flex">
                     <FcDocument />
                     <span>Document: </span>
-                    <a href="https://equinox.business/eqx-limited-pre-sale-is-scheduled-between-6-28th-september/">
+                    <a
+                      href="https://equinox.business/eqx-limited-pre-sale-is-scheduled-between-6-28th-september/"
+                      target="_blank"
+                    >
                       How to buy and Add Asset as EQX
                     </a>
                   </h3>
@@ -504,7 +505,8 @@ const BuyEQX = (props) => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper_items">
+              <div className="swiper_items custom-video">
+                <h2>Video</h2>
                 <div className="video_frame">
                   <iframe
                     className="iframe-video"
@@ -522,14 +524,13 @@ const BuyEQX = (props) => {
         {dialogueBox1 ? (
           <div className="dialogue-box-1">
             <div className="card">
-              
               <div className="card-scroll">
                 {data.map((item, index) => {
                   return (
                     <div
                       className="card-item"
                       key={index}
-                    // onClick={() => handleDropdown(item)}
+                      // onClick={() => handleDropdown(item)}
                     >
                       <img src={Image} alt="" /> <span>{item}</span>
                     </div>
