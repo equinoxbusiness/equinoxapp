@@ -3,7 +3,14 @@ import { FiSettings } from "react-icons/fi";
 import { AiOutlineDown } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
 import { data } from "../../assets/data";
+
+import ImgBNB from "../../assets/images/bnb.svg";
+import ImgBTC from "../../assets/images/btc.svg";
+import ImgBUSD from "../../assets/images/busd.svg";
+import ImgETH from "../../assets/images/eth.svg";
+import ImgUSDT from "../../assets/images/usdt.svg";
 import Image from "../../assets/images/equinox_logo.png";
+
 import React, { useEffect, useCallback } from "react";
 import { Container, Row } from "reactstrap";
 import { FcDocument } from "react-icons/fc";
@@ -367,13 +374,13 @@ const BuyEQX = (props) => {
                       : 0}
                   </span>
                   <label htmlFor="BNB" className="hover-cursor">
-                    <img src={Image} alt="" />
+                    <img src={query == 'USDT'?ImgUSDT:query == 'BNB'?ImgBNB:query == 'BTC'?ImgBTC:query == 'ETH'?ImgETH:query == 'BUSD'?ImgBUSD:Image} alt="" />
                     <select
                       name="query"
                       id="query"
                       onChange={async (e) => {
                         await handleSelect(e);
-                        // console.log("selected--", e.target.value)
+                        console.log("selected--", e.target.value)
                       }}
                       value={query}
                     >
@@ -426,11 +433,11 @@ const BuyEQX = (props) => {
               <input
                 ref={referInput}
                 readOnly
-                value={refLink}
-                onChange={(e) => setRef(e.target.value)}
+                value={refLink?refLink:"Need to buy EQX First"}
+                // onChange={(e) => setRef(e.target.value)}
               />
               {/* {document.queryCommandSupported("copy") && ( */}
-              <button type="button" onClick={(e) => copyToClipboard(e)}>
+              <button type="button" onClick={(e) => refLink?copyToClipboard(e):""}>
                 Copy
               </button>
               {/* )} */}
