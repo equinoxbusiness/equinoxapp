@@ -9,7 +9,17 @@ import {
   STAKE_UNSTAKE_SUCCESS,
   STAKE_UNSTAKE_SUCCESS_RESET,
   REMOVE_LIQUIDITY_SUCCESS,
-  REMOVE_LIQUIDITY_SUCCESS_RESET
+  REMOVE_LIQUIDITY_SUCCESS_RESET,
+  ADD_ORG_FORMDATA,
+  ADD_PROJECT_FORMDATA,
+  ADD_PROPOSAL_FORMDATA,
+  LOAD_DETAILS,
+  LOAD_CATEGORY,
+  LOAD_PROJECT,
+  LOAD_ORG,
+  ADD_ICO_FORMDATA,
+  LOAD_ICOS,
+  LOAD_PROPOSALS
 } from "../constants/action-types";
 
 const initialState = {
@@ -23,7 +33,17 @@ const initialState = {
   swapSuccess: false,
   addLiquiditySuccess: false,
   stakeUnStakeSuccess: false,
-  removeLiquiditySuccess: false
+  removeLiquiditySuccess: false,
+  org: null,
+  orgFormdata: null,
+  projectFormdata: null,
+  auth: true,
+  category: [],
+  project: null,
+  icoFormdata: null, 
+  ico: null,
+  proposalFormdata: null,
+  proposals: null
 };
 
 function rootReducer(state = initialState, action) {
@@ -80,6 +100,74 @@ function rootReducer(state = initialState, action) {
         ...state,
         removeLiquiditySuccess: false,
       };
+    case ADD_ORG_FORMDATA:
+      return {
+        ...state,
+        orgFormdata: {
+          ...state.orgFormdata,
+          ...action.payload
+        }
+      }
+    case ADD_PROJECT_FORMDATA:
+      return {
+        ...state,
+        projectFormdata: {
+          ...state.projectFormdata,
+          ...action.payload
+        }
+      }
+    case ADD_PROPOSAL_FORMDATA:
+        return {
+          ...state,
+          proposalFormdata: {
+            ...state.proposalFormdata,
+            ...action.payload
+          }
+        }
+    case ADD_ICO_FORMDATA:
+      return {
+        ...state,
+        icoFormdata: {
+          ...state.icoFormdata,
+          ...action.payload
+        }
+      }
+    case LOAD_DETAILS: {
+      return {
+        ...state,
+        auth: action.payload
+      }
+    }
+    case LOAD_CATEGORY: {
+      return {
+        ...state,
+        category: action.payload
+      }
+    }
+    case LOAD_PROJECT: {
+      return {
+        ...state,
+        project: action.payload
+      }
+    }
+    case LOAD_ORG: {
+      return {
+        ...state,
+        org: action.payload
+      }
+    }
+    case LOAD_ICOS: {
+      return {
+        ...state,
+        ico: action.payload
+      }
+    }
+    case LOAD_PROPOSALS: {
+      return {
+        ...state,
+        proposals: action.payload
+      }
+    }
     default: {
       return state;
     }

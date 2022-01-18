@@ -1,34 +1,36 @@
 import "./assets/css/App.css";
 import { Switch, Route } from "react-router-dom";
-import { Home, BuyEQX, AboutEqx, AccessOrg, EnterpriceDex } from "./Pages";
-import { Footer, Nav } from "./components/";
 import { Router } from "react-router";
 import history from "./routerHistory";
+import ProtectedLayout from './components/layout/ProtectedLayout/ProtectedLayout';
+import PublicLayout from "./components/layout/PublicLayout/PublicLayout";
+import {useEffect} from 'react';
+import { getMe } from "./services/dashboard";
+import { connect } from 'react-redux';
 
-function App() {
+function App(props) {
+  
+  useEffect(()=> {
+    const account = sessionStorage.getItem('selected_account');
+    if (account) {
+        getMe(account);
+    }
+  }, [props.account?.account]);
+
   return (
     <Router history={history}>
-      <Nav />
       <Switch>
-        <Route path="/about-eqx">
-          <AboutEqx />
-        </Route>
-        <Route path="/access-org">
-          <AccessOrg />
-        </Route>
-        <Route path="/enterprice-dex">
-          <EnterpriceDex />
-        </Route>
-        <Route path="/buy-eqx">
-          <BuyEQX />
-        </Route>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+        <Route path='/dashboard' component={ProtectedLayout} />
+        <Route path='/' component={PublicLayout} />
       </Switch>
-      <Footer />
     </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    account: state.account,
+  };
+};
+
+export default connect(mapStateToProps)(App);

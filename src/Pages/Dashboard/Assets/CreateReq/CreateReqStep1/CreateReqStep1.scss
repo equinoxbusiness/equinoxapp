@@ -1,0 +1,60 @@
+
+.CreateReqStep1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.inner_card {
+    min-height: 75vh;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    background: #e2e2e2;
+    background: #f5f5f5e8 0% 0% no-repeat padding-box;
+    box-shadow: 5px 5px 10px #0000001a;
+    padding: 15px;
+    text-align: center;
+}
+.OrgStep1 .inner_card p {
+    font-size: 14px;
+    color: #707070;
+    margin: 0;
+    font-weight: bold;
+}
+.OrgStep1 .inner_card h2{
+    color:#100E0E;
+    font-weight: bold;
+}
+.my_input label{
+    margin: 0px 0px -25px 20px;
+    display: block;
+    z-index: 9;
+    position: relative;
+    font-size: 14px;
+    color: #707070;
+    font-weight: 600;
+}
+.my_input input{
+    width: 100%;
+    padding: 30px 15px 10px 15px;
+    box-shadow: 0px 12px 40px #00000014;
+    border: none;
+    color: #707070;
+    border-left: 6px solid #fff;
+}
+.my_input input:focus-visible { 
+    border-left: 6px solid #40A2EC;
+    outline: none;
+ }
+ .my_input{
+     margin-bottom: 10px;
+ }
+ .next_btn{
+    border: none;
+    background: unset;
+    font-weight: bold;
+    color: #707070;
+ }

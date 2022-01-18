@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import moment from "moment";
 
 const Counter = () => {
-  let date = moment().add(100, "days").format("YYYY-MM-DD");
+  let date = moment().add(23, "days").format("YYYY-MM-DD");
   const calculateTimeLeft = () => {
     // let year = new Date().getFullYear();
     // {year}-{month}-{days}

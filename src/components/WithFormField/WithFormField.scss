@@ -1,0 +1,36 @@
+.with-form-field {
+    margin-bottom: 10px;
+    .form-label{
+        margin: 0px 0px -25px 20px;
+        display: block;
+        z-index: 9;
+        position: relative;
+        font-size: 14px;
+        color: #707070;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 18px;
+        opacity: 0.7;
+    }
+    .form-input{
+        width: 100%;
+        padding: 30px 15px 10px 15px;
+        box-shadow: 0px 12px 40px #00000014;
+        border: none;
+        color: #707070;
+        border-left: 6px solid #fff;
+    }
+    .form-input:focus-visible { 
+        border-left: 6px solid #40A2EC;
+        outline: none;
+    }
+    .form-input.invalid {
+        border-left: 6px solid #FC0D0D;
+        outline: none;
+    }
+    .form-input:disabled {
+        background-color: #fff;
+    }
+}

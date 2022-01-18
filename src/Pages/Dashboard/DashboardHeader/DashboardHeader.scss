@@ -1,0 +1,97 @@
+.DashboardHeader {
+    border-bottom: 1px solid #c6c6c6;
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+    z-index: 99;
+    .Profile_role{
+        color: #8F9198;
+    }
+    .Profile_dropdown button{
+        background: #f8f6f6;
+        border: none;
+        color: #888;
+        font-size: 24px;
+        padding: 4px 0px 0px 14px;
+    }
+    .Profile_dropdown i{
+        padding: 9px;
+        background: #089eee;
+        color: #fff;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+    }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                &.active {
+                    color: #4EADEC;
+                }
+            }
+        }
+    }
+}
+
+.dashboard_cus_nav_bar li{
+    margin: 0px 15px;
+}
+.dashboard_cus_nav_bar li a{
+   font-weight: bold;
+}
+.dashboard_cus_nav_bar .nv_btn {
+    border: none;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse.collapsing .navbar-nav {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -250px;
+      transition: all 0.2s ease;
+    }
+    .logo {
+      height: 45px;
+    }
+  
+    .navbar-collapse.show .navbar-nav {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      flex-direction: column;
+      height: auto;
+      width: 250px;
+      transition: left 0.35s ease;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      background: #707070;
+      z-index: 9999;
+    }
+    .dashboard_cus_nav_bar .navbar-nav {
+      margin-right: 0px !important;
+    }
+    .dashboard_cus_nav_bar .navbar-nav .nav-link {
+      background: #707070;
+      color: #fff !important;
+    }
+    .dashboard_cus_nav_bar .close {
+      background: #707070;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 29px;
+    }
+    .dashboard_cus_nav_bar .navbar-collapse {
+      flex-basis: auto;
+    }
+    .DashboardHeader .Profile_dropdown i {
+        height: 35px;
+        width: 35px;
+    }
+    .DashboardHeader .Profile_dropdown button {
+        font-size: 17px;
+    }
+  }
+  

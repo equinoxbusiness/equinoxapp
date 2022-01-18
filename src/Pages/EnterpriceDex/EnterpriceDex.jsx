@@ -5,8 +5,7 @@ const EnterpriceDex = () => {
     <div id="enterprice-dex">
       <div className="hero-section">
         <h1>
-          What is <br />
-          <span>Enterprise DEX</span> ?
+          About <span>Enterprise DEX</span> ?
         </h1>
         <p>
           With Enterprise DEX, take an informed decision while trading in

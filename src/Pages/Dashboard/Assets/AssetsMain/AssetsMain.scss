@@ -1,0 +1,132 @@
+.AssetsMain {
+}
+.createreqbtn{
+    color: #089eee;
+    text-decoration: none;
+}
+.a_link {
+    color: inherit;
+    text-decoration: none;
+}
+.cus_tab .nav-tabs .nav-link {
+    font-weight: bold;
+    color: #888;
+    border: none;
+    margin-bottom: 0px;
+}
+.cus_tab .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #4eadec !important;
+    background-color: #f8f6f6 !important;
+}
+.cus_tab .nav-tabs {
+    border-bottom: 1px solid #4eadeb;
+}
+.assets_all_card {
+    padding: 15px;
+    margin-top: 19px;
+    background: #fff;
+    box-shadow: 0px 5px 5px #46588321;
+}
+.all_assets_action {
+    color: #4eadec;
+    font-weight: bold;
+    font-size: 12px;
+    a {
+        color: #4eadec;
+    }
+}
+.all_cardsec_height {
+    height: 71vh;
+    overflow: auto;
+}
+.usdvalue {
+    color: #4eadec;
+}
+.usdvalue span {
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+}
+.crypto_card_head {
+    padding: 15px;
+    margin-top: 19px;
+    background: #fff;
+    box-shadow: 0px 5px 5px #46588321;
+}
+.crpto_card_content {
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0px 5px 5px #46588321;
+}
+.crypto_cardsec_height {
+    height: 32vh;
+    overflow: auto;
+    padding-right: 15px;
+}
+.total_value_card {
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0px 5px 5px #46588321;
+}
+.all_req_table table {
+    width: 100%;
+    border-collapse: initial;
+    border-spacing: 0 15px;
+}
+
+.all_req_table table,
+th,
+td {
+    padding: 4px 8px;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #484848;
+}
+.all_req_table td {
+    border: 1px solid;
+    padding: 4px 8px;
+    border-right: none;
+    border-left: none;
+    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.all_req_table .tdfirst {
+    border-radius: 6px 0px 0px 6px;
+    // border-left: 1px solid !important;
+}
+.all_req_table .tdlast {
+    border-radius: 0px 6px 6px 0px;
+    // border-right: 1px solid !important;
+}
+.all_req_table tr {
+    background-color: #fff;
+    box-shadow: 0px 5px 5px #46588321;
+}
+.all_req_table {
+    height: 71vh;
+}
+
+@media (max-width: 992px) {
+    .crypto_cardsec_height {
+        height: auto;
+        padding-right: 0px;
+    }
+    .all_cardsec_height {
+        height: auto;
+    }
+}
+.approve {
+    cursor: pointer;
+}
+.approved {
+    color: #49FE1E;
+}
+.disabled {
+    color: #B8B8B8;
+}
+.finalize-btn {
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}

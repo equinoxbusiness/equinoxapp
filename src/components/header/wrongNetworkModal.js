@@ -15,9 +15,9 @@ function GeneralModal({ title, message, setShow, }) {
               <div onClick={closeModal} className="modal-close">
                 {/* <img src= alt="icon" className="cursor-pointer" /> */}
               </div>
-              <h1 className="text-theme text-center font-weight-bold">{title}</h1>
+              <h1 className="text-theme text-center font-weight-bold text-danger">{title}</h1>
               <div>
-                <div className="text-muted text-center ln-2 mt-3">{message}</div>
+                <div className="text-muted text-center ln-2 mt-3 ">{message}</div>
               </div>
               <br />
               <div className="text-center">

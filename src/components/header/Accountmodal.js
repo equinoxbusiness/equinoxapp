@@ -7,6 +7,7 @@ import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import detectEthereumProvider from "@metamask/detect-provider";
 import GeneralModal from "./wrongNetworkModal";
+import { NetworkError } from "../modals";
 
 function initWeb3(provider) {
   const web3 = new Web3(provider);
@@ -45,7 +46,7 @@ const AccountModal = (props) => {
       walletconnect: {
         package: WalletConnectProvider,
         options: {
-          infuraId: "c3f6ce1953e4470191a8d12b8ba92672",
+          infuraId: "0301b3bec4314d8e8b5aa8de6f153f27",
           rpcUrl: process.env.REACT_APP_RPC_URL,
         },
       },
@@ -310,7 +311,7 @@ const AccountModal = (props) => {
   return (
     <>
       {props.mobile ? (
-        <div className="button-switch ml-30">
+        <div className="button-switch ml-30 mobile">
           <input
             type="checkbox"
             id="switch-blue-mobile"
@@ -335,30 +336,29 @@ const AccountModal = (props) => {
         </div>
       ) : (
         <div className="button-switch desktop">
-          <input
-            type="checkbox"
-            id="switch-blue"
-            className="switch"
-            checked={
-              window.sessionStorage.getItem("selected_account") !== null
-                ? true
-                : false
-            }
-            // defaultChecked
-            onChange={() => {
-              window.sessionStorage.getItem("selected_account")
-                ? onDisconnect()
-                : onConnect();
-            }}
-          />
-          <label htmlFor="switch-blue" className="lbl-off">
-            Off&nbsp;Wallet
-          </label>
-          <label htmlFor="switch-blue" className="lbl-on">
-            On&nbsp;Wallet
+          <label className="switch">
+            <input
+              type="checkbox"
+              id="switch-blue"
+              className="switch-input"
+              checked={
+                window.sessionStorage.getItem("selected_account") !== null
+                  ? true
+                  : false
+              }
+              // defaultChecked
+              onChange={() => {
+                window.sessionStorage.getItem("selected_account")
+                  ? onDisconnect()
+                  : onConnect();
+              }}
+            />
+            <span className="switch-label" data-on="ONCHAIN" data-off="OFFCHAIN"></span>
+            <span className="switch-handle"></span>
           </label>
         </div>
       )}
+      <NetworkError open={wrongNetwork} setOpen={setWrongNetwork} />
     </>
   );
 };

@@ -139,14 +139,20 @@ const Nav = () => {
             <li onClick={() => setMenuOpen(false)}>
               <Link to="/">Home</Link>
             </li>
-            <li onClick={() => setMenuOpen(false)}>
+            {/*<li onClick={() => setMenuOpen(false)}>
               <Link to="/buy-eqx">Buy EQX</Link>
-            </li>
+            </li>*/}
             <li onClick={() => setMenuOpen(false)}>
               <Link to="/enterprice-dex">Enterprise DEX</Link>
             </li>
             <li onClick={() => setMenuOpen(false)}>
               <Link to="/access-org">Access ORG 3.0</Link>
+            </li>
+            <li onClick={() => setMenuOpen(false)}>
+              <Link to="/icos">ICOs</Link>
+            </li>
+            <li onClick={() => setMenuOpen(false)}>
+              <Link to="/buy-icos">Buy ICOs</Link>
             </li>
             <li onClick={() => setMenuOpen(false)}>
               <a href="https://equinox.business/" target="_blank">
@@ -159,18 +165,24 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-      <ul className="desktop">
+      <ul className="desktop my-auto">
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
+        {/*<li>
           <Link to="/buy-eqx">Buy EQX</Link>
-        </li>
+        </li>*/}
         <li>
           <Link to="/enterprice-dex">Enterprise DEX</Link>
         </li>
         <li>
           <Link to="/access-org">Access ORG 3.0</Link>
+        </li>
+        <li>
+          <Link to="/icos">ICOs</Link>
+        </li>
+        <li>
+          <Link to="/buy-icos">Buy ICOs</Link>
         </li>
         <li>
           <a href="https://equinox.business/" target="_blank">

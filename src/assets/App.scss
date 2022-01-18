@@ -1250,3 +1250,92 @@ h5 {
     }
   }
 }
+
+.my_input label {
+  margin: 0px 0px -25px 20px;
+  display: block;
+  z-index: 9;
+  position: relative;
+  font-size: 14px;
+  color: #707070;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 18px;
+  opacity: 0.7;
+}
+
+.my_input input, .my_input textarea {
+  width: 100%;
+  padding: 30px 15px 10px 15px;
+  box-shadow: 0px 12px 40px #00000014;
+  border: none;
+  color: #707070;
+  border-left: 6px solid #fff;
+}
+
+.my_input input:focus-visible, .my_input textarea:focus-visible {
+  border-left: 6px solid #40A2EC;
+  outline: none;
+}
+
+.my_input {
+  margin-bottom: 10px;
+}
+
+.next_btn {
+  border: none;
+  background: unset;
+  font-weight: bold;
+  color: #707070;
+}
+
+.next_btn i {
+  color: #FF5A87;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+  outline: 0;
+  box-shadow: inherit !important;
+}
+
+.Dashboard {
+  min-height: 100vh;
+  background: #F8F6F6;
+}
+
+.About, .Home, .Org, .Docs, .Edex, .OrgStep1.OrgStep2, .OrgStep3, .OrgStep4, .OrgStep5, .ProjectStep1, .ProjectStep2, .ProjectStep3, .ProjectStep4, .ProjectStep5, .ProjectStep6 {
+  height: calc(100vh - 135px);
+}
+
+.font14 {
+  font-size: 14px !important;
+}
+
+.font12 {
+  font-size: 12px !important;
+}
+
+.color_p {
+  color: #4EADEC !important;
+}
+
+.color_s {
+  color: #707070 !important;
+}
+
+.ProposalStep1, .ProposalStep2, .ProposalStep3 {
+  background: #f8f6f6;
+}
+
+@media (max-width: 992px) {
+  .About, .Home, .Org, .Docs, .Edex, .OrgStep1.OrgStep2, .OrgStep3, .OrgStep4, .OrgStep5, .ProjectStep1, .ProjectStep2, .ProjectStep3, .ProjectStep4, .ProjectStep5, .ProjectStep6 {
+    height: auto;
+    margin-top: 15px;
+  }
+}
+
+.disabled-link {
+  pointer-events: none;
+}
