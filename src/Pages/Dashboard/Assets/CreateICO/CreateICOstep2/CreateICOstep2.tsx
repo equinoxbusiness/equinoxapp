@@ -160,7 +160,7 @@ const CreateICOstep2 = (props: any) => {
                       <Form>
                         <WithFormField label="Start date" name="start_date" error={errors.start_date && touched.start_date} type="date" max={values.end_date}/>
                         <WithFormField label="End date" name="end_date" error={errors.end_date && touched.end_date} type="date" min={values.start_date}/>
-                        <WithFormField label="Offer Price" name="offer_price" error={errors.offer_price && touched.offer_price} type="number"/>
+                        <WithFormField label="Offer Price ( Enter tokens per bnb value here )" name="offer_price" error={errors.offer_price && touched.offer_price} type="number"/>
                         <WithFormField label="Soft Cap" name="soft_cap" error={errors.soft_cap && touched.soft_cap} type="number" onBlur={(e: any)=>handleBlur(e, setFieldValue, values, setFieldError, setFieldTouched)}/>
                         <WithFormField label="Hard Cap" name="hard_cap" error={errors.hard_cap && touched.hard_cap} type="number" disabled={true}/>
                         <div className="text-end mb-4">

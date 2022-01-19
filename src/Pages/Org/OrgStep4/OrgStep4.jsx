@@ -184,7 +184,7 @@ const OrgStep4 = (props) => {
                 {({ errors, values, touched, setValues , isValid}) => (
                   <Form>
                     <div className="col-md-1"></div>
-                    <div className="col-md-10 ">
+                    <div className="col-md-10 mx-auto">
                       <div className="step4_content_max_height">
                         <FieldArray name="members">
                           {()=>(members.map((member, index)=>{

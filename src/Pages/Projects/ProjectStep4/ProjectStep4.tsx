@@ -78,7 +78,7 @@ const ProjectStep4 = (props:any) => {
                     <WithFormField label="Deployer Address" name="deployer_wallet_address_id" error={errors.deployer_wallet_address_id && touched.deployer_wallet_address_id} disabled={true}/>
                     <WithFormField label="Token Name" name="token_name" error={errors.token_name && touched.token_name}/>
                     <WithFormField label="Token Ticker" name="token_ticker" error={errors.token_ticker && touched.token_ticker}/>
-                    <WithFormField label="Fixed Supply ( Add 9 decimals after your total supply, as contract is 9 decimals )" name="fixed_supply" error={errors.fixed_supply && touched.fixed_supply} onBlur={(e: any)=>handleBlur(e, setFieldValue, values, setFieldError, setFieldTouched)} type="number"/>
+                    <WithFormField label="Fixed Supply ( Add 9 decimals after your total supply, as contract is 9 decimals )" name="fixed_supply" error={errors.fixed_supply && touched.fixed_supply} type="number"/>
                     <div className="float-start">
                       <button className="next_btn" type="button" onClick={()=>props.previousStep()}>Previuos</button>
                     </div>

@@ -9,8 +9,8 @@ import { connect } from "react-redux";
 const CreateICOStep1Schema = Yup.object().shape({
   project: Yup.string()
     .required('Required'),
-  assets: Yup.number()
-    .required('Required'),
+  //assets: Yup.number()
+  //  .required('Required'),
   supply: Yup.number().required('Required')
 });
 
@@ -68,7 +68,7 @@ const CreateICOstep1 = (props: any) => {
                     return (
                       <Form>
                         <WithFormField label="Project" name="project" error={errors.project && touched.project}/>
-                        <WithFormField label="Asset" name="assets" error={errors.assets && touched.assets} type="number"/>
+                        {/*<WithFormField label="Asset" name="assets" error={errors.assets && touched.assets} type="number"/>*/}
                         <WithFormField label="Supply for ICO ( Add 9 decimals after your total supply, as contract is 9 decimals )" name="supply" error={errors.supply && touched.supply} type="number" onKeyPress={(event: any)=>limitMaxvalue(event)} onBlur={(e: any)=>handleBlur(e, setFieldValue, values, setFieldError, setFieldTouched)}/>
                         <div className="text-end mb-4">
                           <button className="next_btn">NEXT <i className="fa fa-sign-in ps-2" aria-hidden="true"></i></button>

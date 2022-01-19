@@ -24,7 +24,7 @@ const ProjectStep2 = (props: any) => {
                 <p>PROJECT LAUNCHER</p>
                 <h2>STEP 2</h2>
                 <p className="text-primary">
-                  Social Channels
+                  Description
                 </p>
               </div>
             </div>

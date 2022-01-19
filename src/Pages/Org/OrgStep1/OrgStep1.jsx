@@ -32,7 +32,7 @@ const OrgStep1 = (props) => {
                 <p>ORG 3.0 LAUNCHPAD</p>
                 <h2>CREATE ORG 3.0</h2>
                 <p>
-                  ORG 3.0 are 'Operations and resource group' on Binance Smart Chain. You must hold 100 EQX to deploy and access ORG 3.0 Ecosystem. Read <span className="text-primary">Docs</span> for requirements.
+                  ORG 3.0 are 'Operations and resource group' on Binance Smart Chain. You must hold 100 EQX to deploy and access ORG 3.0 Ecosystem. Read <a href="https://docs.equinox.business/"><span className="text-primary">Docs</span></a> for requirements.
                 </p>
               </div>
             </div>

@@ -155,13 +155,13 @@ const AssetsMain = (props: any) => {
                   {org && org.project && org.project.length && org.project.map((pro: any)=>{
                     return (
                       <div className="assets_all_card mb-4">
-                        <h6>Equinox (EQX)</h6>
+                        <h6>{pro.project_name}</h6>
                         <p className="font12 mb-1 text-truncate">{pro.gtoken_address}</p>
                         <div className="row">
                           <div className="col-3 text-nowrap font12">
                             Total Supply
                           </div>
-                          <div className="col-3 text-nowrap font12 text-end">
+                          <div className="col-3 text-nowrap font12 text-end fw-bold">
                             {pro.fixed_supply}
                           </div>
                         </div>
@@ -169,7 +169,7 @@ const AssetsMain = (props: any) => {
                           <div className="col-3 text-nowrap font12">
                             Available
                           </div>
-                          <div className="col-3 text-nowrap font12 text-end">
+                          <div className="col-3 text-nowrap font12 text-end fw-bold">
                             95500000
                           </div>
                         </div>

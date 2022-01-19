@@ -56,7 +56,7 @@ const ProposalStep1 = (props: any) => {
                   <Form>
                     <WithFormField label="Project" name="project_name" error={errors.project_name && touched.project_name} disabled={true} />
                     <WithFormField label="Category" name="category_id" type="select" options={props.category ? props.category : []} error={errors.category_id && touched.category_id}/>
-                    <WithFormField label="Time required to complete" name="end_time_in_days" error={errors.end_time_in_days && touched.end_time_in_days} type="number"/>
+                    <WithFormField label="Time required to complete in days" name="end_time_in_days" error={errors.end_time_in_days && touched.end_time_in_days} type="number"/>
                     <div className="text-end mb-4">
                       <button className="next_btn" type="submit">NEXT <i className="fa fa-sign-in ps-2" aria-hidden="true"></i></button>
                     </div>

@@ -40,7 +40,7 @@ const ProjectStep5 = (props: any) => {
     let multiSig = localStorage.getItem(accounts[0]);
     await contract.deploy({
       data:GToken.bytecode,
-      arguments:[props.projectFormdata?.token_name, props.projectFormdata?.token_ticker, decimal, props.projectFormdata?.fixed_supply, accounts[0], props.org.org.multisig_address]
+      arguments:[props.projectFormdata?.token_name, props.projectFormdata?.token_ticker, decimal, props.projectFormdata?.fixed_supply*1000000000, accounts[0], props.org.org.multisig_address]
     })
     .send({from: accounts[0]})
     .on('error', (err: any)=>{
@@ -89,7 +89,7 @@ const ProjectStep5 = (props: any) => {
       
       axios.post(`${process.env.REACT_APP_API_URL}/add_project`, formData)
         .then((res)=>{
-          getProjects(res.data.id);
+          getProjects(res.data.project_id);
           props.nextStep();
         });
     }

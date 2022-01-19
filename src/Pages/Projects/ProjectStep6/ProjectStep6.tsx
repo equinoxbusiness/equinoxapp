@@ -5,10 +5,6 @@ import { getOrg } from '../../../services/dashboard';
 import { connect } from 'react-redux';
 
 const ProjectStep6 = (props: any) => {
-  const {auth} = props;
-  useEffect(()=>{
-    if (auth && auth.org_id) getOrg(auth.org_id);
-  }, [auth])
   return (
     <div className="ProjectStep6" data-testid="ProjectStep6">
       <div className="container">
@@ -33,7 +29,6 @@ const ProjectStep6 = (props: any) => {
 
 const mapStateToProps = (state: any) => {
   return {
-    auth: state.auth
   };
 };
 

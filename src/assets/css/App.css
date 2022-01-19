@@ -1769,7 +1769,7 @@ h5 {
     background: transparent linear-gradient(270deg, #3810DE 0%, #7D5ED4 44%, #851E91 100%) 0% 0% no-repeat padding-box;
     box-shadow: inset 0px 3px 6px #1B7CA129, 0px 3px 6px #00000029;
     border: 1px solid #68D6E2;
-    border-radius: 2px;
+    border-radius: 7px;
     color: #fff;
     padding: 15px
 }

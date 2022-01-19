@@ -44,7 +44,7 @@ const Home1 = () => {
                         <span className="font-12">BETA VERSION</span>
                     </h1>
                     <h5 className="col-md-10 mx-auto mb-4">GOVERN DAO WITH G TOKEN. MANAGE ASSETS IN DAO MULTISIG WALLET. RAISE FUNDS WITH UNIFIED ICO SWAP.</h5>
-                    <div className="col-md-10 mx-auto">
+                    <div className="col-md-8 mx-auto">
                         <div className="row">
                             <div className="col-md-4">
                                 <a href={Pdf} download="EQX-Whitepaper-V1.0.pdf"><button>Whitepaper V1.0</button></a>
@@ -53,16 +53,16 @@ const Home1 = () => {
                                 <Link to="/access-org"><button>Create ORG 3.0</button></Link>
                             </div>
                             <div className="col-md-4">
-                                <button>Know More</button>
+                                <a href="http://equinox.business"><button>Know More</button></a>
                             </div>
                             <div className="col-md-4">
                                 <button>Documentation</button>
                             </div>
                             <div className="col-md-4">
-                                <button>Support</button>
+                                <a href="https://t.me/orgsupport"><button>Support</button></a>
                             </div>
                             <div className="col-md-4">
-                                <button>Playground</button>
+                                <a href="https://test.equinox.business/"><button>Playground</button></a>
                             </div>
                         </div>
                     </div>
